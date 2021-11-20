@@ -1,0 +1,10 @@
+non_zero_digit = 1|2| .. |9
+digit = 0|1|..|9
+number = non_zero_digit{digit}
+letter = a|b|..|z|A|B..|Z
+character = letter | digit
+states = "states" number {character}
+input_state = "input_state" character
+out_states = "out_states" number {character}
+alphabet = "alphabet" number {character}
+transitions = "transitions" number {character character character}
